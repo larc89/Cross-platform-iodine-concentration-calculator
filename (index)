@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    
+    <title>Cross-platform IC Calculator</title>
+  </head>
+  <body>
+    <h1>Cross-platform IC Calculator</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <br>
+    <div class="dropdown platform">
+        <b>Platform:</b>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Platform
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Rapid kV switching DECT (rs-DECT)</button>
+            <button class="dropdown-item" type="button">Dual-layer DECT (dl-DECT)</button>
+            <button class="dropdown-item" type="button">Dual-source DECT 80/150Sn kV (ds-DECT)</button>
+            <button class="dropdown-item" type="button">Dual-source DECT 90/150Sn kV (ds-DECT)</button>
+            <button class="dropdown-item" type="button">Dual-source DECT 100/150Sn kV (ds-DECT)</button>
+        </div>
+    </div>
+    <br>
+    <div class="dropdown phase">
+        <b>Acquisition Phase:</b>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Acquisition Phase
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Venous</button>
+            <button class="dropdown-item" type="button">Delayed</button>
+        </div>
+    </div>
+    <br>
+    <div class="dropdown exposure">
+        <b>Exposure:</b>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Exposure
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button">Vendor-specific</button>
+            <button class="dropdown-item" type="button">Matched to rs-DECT exposure</button>
+            <button class="dropdown-item" type="button">40% reduced exposure</button>
+        </div>
+    </div>
+    <br>
+    <div class="pb-ic">
+        <b>Measured platform-based IC (pb-IC): </b><input type="text"> mgI/mL <span class="error"></span>
+    </div>
+    <br>
+    <div class="conversion-factor">
+        <b>Conversion factor: </b><span></span>
+    </div>
+    <br>
+    <button class="btn btn-secondary calculate">Calculate</button>
+    <br>
+    <br>
+    <div class="cp-ic">
+        <b>Cross-platform IC (cp-IC): </b><span></span>
+    </div>
+
+    <script type="application/javascript" src="lib/constants.js"></script>
+    <script type="application/javascript" src="lib/utilities.js"></script>
+    <script type="application/javascript" src="lib/index.js"></script>
+  </body>
+</html>
